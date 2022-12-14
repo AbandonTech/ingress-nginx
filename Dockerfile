@@ -15,6 +15,6 @@ RUN rm /etc/nginx/conf.d/default.conf && \
     ln -sf /dev/stderr /var/log/nginx/error.log
 
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=builder /build/dist /var/www/html/
+COPY --from=builder /build/pages /var/www/html/
 
 CMD ["nginx", "-g", "daemon off;"]

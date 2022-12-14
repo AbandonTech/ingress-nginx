@@ -4,9 +4,14 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "cp -r pages/ dist/ && npx tailwindcss -o ./dist/style.css --minify"
+    "dev": "concurrently \"yarn run dev:tailwind\" \"yarn run dev:server\"",
+    "dev:tailwind": "npx tailwindcss -o ./pages/style.css --watch",
+    "dev:server": "http-server -a localhost -o pages/404.html",
+    "build": "npx tailwindcss -o ./pages/style.css --minify"
   },
   "devDependencies": {
+    "concurrently": "^7.6.0",
+    "http-server": "^14.1.1",
     "tailwindcss": "^3.2.4"
   }
 }
