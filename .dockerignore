@@ -1,0 +1,9 @@
+* # Ignore all
+
+# Make exceptions
+!pages/
+!nginx.conf
+!package.json
+!style.css
+!tailwind.config.js
+!yarn.lock

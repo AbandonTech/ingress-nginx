@@ -1,0 +1,12 @@
+{
+  "name": "ingress-nginx",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "cp -r pages/ dist/ && npx tailwindcss -o ./dist/style.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}
